@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2
+CMAKE_SOURCE_DIR = /home/ragnar/git/planetoid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2
+CMAKE_BINARY_DIR = /home/ragnar/git/planetoid
 
 # Utility rule file for imgui.
 
@@ -55,60 +55,60 @@ CMakeFiles/./imgui-complete: imgui/src/imgui-stamp/./imgui-patch
 CMakeFiles/./imgui-complete: imgui/src/imgui-stamp/./imgui-configure
 CMakeFiles/./imgui-complete: imgui/src/imgui-stamp/./imgui-build
 CMakeFiles/./imgui-complete: imgui/src/imgui-stamp/./imgui-install
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Completed 'imgui'"
-	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/.
-	/usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/./imgui-complete
-	/usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui-stamp/./imgui-done
+	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/CMakeFiles/.
+	/usr/bin/cmake -E touch /home/ragnar/git/planetoid/CMakeFiles/./imgui-complete
+	/usr/bin/cmake -E touch /home/ragnar/git/planetoid/imgui/src/imgui-stamp/./imgui-done
 
 imgui/src/imgui-stamp/./imgui-install: imgui/src/imgui-stamp/./imgui-build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing install step for 'imgui'"
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/build && $(MAKE) install
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/build && /usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui-stamp/./imgui-install
+	cd /home/ragnar/git/planetoid/imgui/build && $(MAKE) install
+	cd /home/ragnar/git/planetoid/imgui/build && /usr/bin/cmake -E touch /home/ragnar/git/planetoid/imgui/src/imgui-stamp/./imgui-install
 
 imgui/src/imgui-stamp/./imgui-mkdir:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Creating directories for 'imgui'"
-	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui
-	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/build
-	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui
-	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/tmp
-	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui-stamp/.
-	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src
-	/usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui-stamp/./imgui-mkdir
+	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/imgui/src/imgui
+	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/imgui/build
+	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/imgui
+	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/imgui/tmp
+	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/imgui/src/imgui-stamp/.
+	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/imgui/src
+	/usr/bin/cmake -E touch /home/ragnar/git/planetoid/imgui/src/imgui-stamp/./imgui-mkdir
 
 imgui/src/imgui-stamp/./imgui-download: imgui/src/imgui-stamp/imgui-gitinfo.txt
 imgui/src/imgui-stamp/./imgui-download: imgui/src/imgui-stamp/./imgui-mkdir
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing download step (git clone) for 'imgui'"
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src && /usr/bin/cmake -P /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/tmp/imgui-gitclone.cmake
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src && /usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui-stamp/./imgui-download
+	cd /home/ragnar/git/planetoid/imgui/src && /usr/bin/cmake -P /home/ragnar/git/planetoid/imgui/tmp/imgui-gitclone.cmake
+	cd /home/ragnar/git/planetoid/imgui/src && /usr/bin/cmake -E touch /home/ragnar/git/planetoid/imgui/src/imgui-stamp/./imgui-download
 
 imgui/src/imgui-stamp/./imgui-update: imgui/src/imgui-stamp/./imgui-download
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing update step for 'imgui'"
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui && /usr/bin/cmake -E copy /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui_CMakeLists.txt /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui/CMakeLists.txt
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui && /usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui-stamp/./imgui-update
+	cd /home/ragnar/git/planetoid/imgui/src/imgui && /usr/bin/cmake -E copy /home/ragnar/git/planetoid/imgui_CMakeLists.txt /home/ragnar/git/planetoid/imgui/src/imgui/CMakeLists.txt
+	cd /home/ragnar/git/planetoid/imgui/src/imgui && /usr/bin/cmake -E touch /home/ragnar/git/planetoid/imgui/src/imgui-stamp/./imgui-update
 
 imgui/src/imgui-stamp/./imgui-patch: imgui/src/imgui-stamp/./imgui-download
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "No patch step for 'imgui'"
-	/usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui-stamp/./imgui-patch
+	/usr/bin/cmake -E touch /home/ragnar/git/planetoid/imgui/src/imgui-stamp/./imgui-patch
 
 imgui/src/imgui-stamp/./imgui-configure: imgui/tmp/imgui-cfgcmd.txt
 imgui/src/imgui-stamp/./imgui-configure: imgui/src/imgui-stamp/./imgui-update
 imgui/src/imgui-stamp/./imgui-configure: imgui/src/imgui-stamp/./imgui-patch
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing configure step for 'imgui'"
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/build && /usr/bin/cmake -DCMAKE_INSTALL_PREFIX:PATH=/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui "-GUnix Makefiles" /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/build && /usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui-stamp/./imgui-configure
+	cd /home/ragnar/git/planetoid/imgui/build && /usr/bin/cmake -DCMAKE_INSTALL_PREFIX:PATH=/home/ragnar/git/planetoid/imgui "-GUnix Makefiles" /home/ragnar/git/planetoid/imgui/src/imgui
+	cd /home/ragnar/git/planetoid/imgui/build && /usr/bin/cmake -E touch /home/ragnar/git/planetoid/imgui/src/imgui-stamp/./imgui-configure
 
 imgui/src/imgui-stamp/./imgui-build: imgui/src/imgui-stamp/./imgui-configure
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing build step for 'imgui'"
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/build && $(MAKE)
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/build && /usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/src/imgui-stamp/./imgui-build
+	cd /home/ragnar/git/planetoid/imgui/build && $(MAKE)
+	cd /home/ragnar/git/planetoid/imgui/build && /usr/bin/cmake -E touch /home/ragnar/git/planetoid/imgui/src/imgui-stamp/./imgui-build
 
 imgui: CMakeFiles/imgui
 imgui: CMakeFiles/./imgui-complete
@@ -131,6 +131,6 @@ CMakeFiles/imgui.dir/clean:
 .PHONY : CMakeFiles/imgui.dir/clean
 
 CMakeFiles/imgui.dir/depend:
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/imgui.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ragnar/git/planetoid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ragnar/git/planetoid /home/ragnar/git/planetoid /home/ragnar/git/planetoid /home/ragnar/git/planetoid /home/ragnar/git/planetoid/CMakeFiles/imgui.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/imgui.dir/depend
 

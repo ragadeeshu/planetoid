@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2
+CMAKE_SOURCE_DIR = /home/ragnar/git/planetoid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2
+CMAKE_BINARY_DIR = /home/ragnar/git/planetoid
 
 # Include any dependencies generated for this target.
 include CMakeFiles/EDAN_35_Lab2.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/EDAN_35_Lab2.dir/flags.make
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.o: src/Bonobo.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Bonobo.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.o -c /home/ragnar/git/planetoid/src/Bonobo.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Bonobo.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/Bonobo.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Bonobo.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/Bonobo.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/Bonobo.cpp.o.provides.build: CMakeFiles/EDAN_35_
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.o: src/Deferred.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Deferred.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.o -c /home/ragnar/git/planetoid/src/Deferred.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Deferred.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/Deferred.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Deferred.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/Deferred.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/Deferred.cpp.o.provides.build: CMakeFiles/EDAN_3
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.o: src/GLB.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLB.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.o -c /home/ragnar/git/planetoid/src/GLB.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLB.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/GLB.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLB.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/GLB.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.o.requires
@@ -120,17 +120,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/GLB.cpp.o.provides.build: CMakeFiles/EDAN_35_Lab
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.o: src/GLBdecl.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLBdecl.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.o -c /home/ragnar/git/planetoid/src/GLBdecl.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLBdecl.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/GLBdecl.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLBdecl.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/GLBdecl.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.o.requires
@@ -143,17 +143,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/GLBdecl.cpp.o.provides.build: CMakeFiles/EDAN_35
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.o: src/GLStateInspection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLStateInspection.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.o -c /home/ragnar/git/planetoid/src/GLStateInspection.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLStateInspection.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/GLStateInspection.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLStateInspection.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/GLStateInspection.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.o.requires
@@ -166,17 +166,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspection.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.o: src/GLStateInspectionView.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLStateInspectionView.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.o -c /home/ragnar/git/planetoid/src/GLStateInspectionView.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLStateInspectionView.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/GLStateInspectionView.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/GLStateInspectionView.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/GLStateInspectionView.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.o.requires
@@ -189,17 +189,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/GLStateInspectionView.cpp.o.provides.build: CMak
 
 CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.o: src/InputHandler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/InputHandler.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.o -c /home/ragnar/git/planetoid/src/InputHandler.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/InputHandler.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/InputHandler.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/InputHandler.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/InputHandler.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.o.requires
@@ -212,17 +212,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/InputHandler.cpp.o.provides.build: CMakeFiles/ED
 
 CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.o: src/lodepng.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/lodepng.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.o -c /home/ragnar/git/planetoid/src/lodepng.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/lodepng.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/lodepng.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/lodepng.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/lodepng.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.o.requires
@@ -235,17 +235,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/lodepng.cpp.o.provides.build: CMakeFiles/EDAN_35
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.o: src/Log.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Log.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.o -c /home/ragnar/git/planetoid/src/Log.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Log.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/Log.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Log.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/Log.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.o.requires
@@ -258,17 +258,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/Log.cpp.o.provides.build: CMakeFiles/EDAN_35_Lab
 
 CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.o: src/LogView.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/LogView.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.o -c /home/ragnar/git/planetoid/src/LogView.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/LogView.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/LogView.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/LogView.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/LogView.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.o.requires
@@ -281,17 +281,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/LogView.cpp.o.provides.build: CMakeFiles/EDAN_35
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.o: src/Main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.o -c /home/ragnar/git/planetoid/src/Main.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Main.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/Main.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Main.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/Main.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.o.requires
@@ -304,17 +304,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/Main.cpp.o.provides.build: CMakeFiles/EDAN_35_La
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.o: src/Misc.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Misc.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.o -c /home/ragnar/git/planetoid/src/Misc.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Misc.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/Misc.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Misc.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/Misc.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.o.requires
@@ -327,17 +327,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/Misc.cpp.o.provides.build: CMakeFiles/EDAN_35_La
 
 CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.o: src/ObjReader.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/ObjReader.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.o -c /home/ragnar/git/planetoid/src/ObjReader.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/ObjReader.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/ObjReader.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/ObjReader.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/ObjReader.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.o.requires
@@ -350,17 +350,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/ObjReader.cpp.o.provides.build: CMakeFiles/EDAN_
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.o: src/Profiler.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Profiler.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.o -c /home/ragnar/git/planetoid/src/Profiler.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Profiler.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/Profiler.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Profiler.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/Profiler.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.o.requires
@@ -373,17 +373,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/Profiler.cpp.o.provides.build: CMakeFiles/EDAN_3
 
 CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.o: src/ProfilerView.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/ProfilerView.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.o -c /home/ragnar/git/planetoid/src/ProfilerView.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/ProfilerView.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/ProfilerView.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/ProfilerView.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/ProfilerView.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.o.requires
@@ -396,17 +396,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/ProfilerView.cpp.o.provides.build: CMakeFiles/ED
 
 CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.o: src/RenderState.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/RenderState.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.o -c /home/ragnar/git/planetoid/src/RenderState.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/RenderState.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/RenderState.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/RenderState.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/RenderState.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.o.requires
@@ -419,17 +419,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/RenderState.cpp.o.provides.build: CMakeFiles/EDA
 
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.o: src/SimpleDraw.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/SimpleDraw.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.o -c /home/ragnar/git/planetoid/src/SimpleDraw.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/SimpleDraw.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/SimpleDraw.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/SimpleDraw.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/SimpleDraw.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.o.requires
@@ -442,17 +442,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/SimpleDraw.cpp.o.provides.build: CMakeFiles/EDAN
 
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.o: src/SimpleText.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/SimpleText.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.o -c /home/ragnar/git/planetoid/src/SimpleText.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/SimpleText.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/SimpleText.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/SimpleText.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/SimpleText.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.o.requires
@@ -465,17 +465,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/SimpleText.cpp.o.provides.build: CMakeFiles/EDAN
 
 CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.o: src/StructDesc.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/StructDesc.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.o -c /home/ragnar/git/planetoid/src/StructDesc.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/StructDesc.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/StructDesc.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/StructDesc.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/StructDesc.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.o.requires
@@ -488,17 +488,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/StructDesc.cpp.o.provides.build: CMakeFiles/EDAN
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.o: src/Types.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Types.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.o -c /home/ragnar/git/planetoid/src/Types.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Types.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/Types.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Types.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/Types.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.o.requires
@@ -511,17 +511,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/Types.cpp.o.provides.build: CMakeFiles/EDAN_35_L
 
 CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.o: src/VectorMath.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/VectorMath.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.o -c /home/ragnar/git/planetoid/src/VectorMath.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/VectorMath.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/VectorMath.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/VectorMath.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/VectorMath.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.o.requires
@@ -534,17 +534,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/VectorMath.cpp.o.provides.build: CMakeFiles/EDAN
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.o: src/Window.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Window.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.o -c /home/ragnar/git/planetoid/src/Window.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Window.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/Window.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/Window.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/Window.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.o.requires
@@ -557,17 +557,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/Window.cpp.o.provides.build: CMakeFiles/EDAN_35_
 
 CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.o: src/gl3w.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/gl3w.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.o -c /home/ragnar/git/planetoid/src/gl3w.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/gl3w.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/gl3w.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/gl3w.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/gl3w.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.o.requires
@@ -580,17 +580,17 @@ CMakeFiles/EDAN_35_Lab2.dir/src/gl3w.cpp.o.provides.build: CMakeFiles/EDAN_35_La
 
 CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.o: CMakeFiles/EDAN_35_Lab2.dir/flags.make
 CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.o: src/imgui_impl_glfw_gl3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.o -c /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/imgui_impl_glfw_gl3.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.o -c /home/ragnar/git/planetoid/src/imgui_impl_glfw_gl3.cpp
 
 CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/imgui_impl_glfw_gl3.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ragnar/git/planetoid/src/imgui_impl_glfw_gl3.cpp > CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.i
 
 CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/src/imgui_impl_glfw_gl3.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ragnar/git/planetoid/src/imgui_impl_glfw_gl3.cpp -o CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.s
 
 CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.o.requires:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/src/imgui_impl_glfw_gl3.cpp.o.requires
@@ -698,6 +698,6 @@ CMakeFiles/EDAN_35_Lab2.dir/clean:
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/clean
 
 CMakeFiles/EDAN_35_Lab2.dir/depend:
-	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/EDAN_35_Lab2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ragnar/git/planetoid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ragnar/git/planetoid /home/ragnar/git/planetoid /home/ragnar/git/planetoid /home/ragnar/git/planetoid /home/ragnar/git/planetoid/CMakeFiles/EDAN_35_Lab2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/EDAN_35_Lab2.dir/depend
 

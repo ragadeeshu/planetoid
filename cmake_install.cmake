@@ -1,4 +1,4 @@
-# Install script for directory: /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2
+# Install script for directory: /home/ragnar/git/planetoid
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-file(WRITE "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/${CMAKE_INSTALL_MANIFEST}" "")
+file(WRITE "/home/ragnar/git/planetoid/${CMAKE_INSTALL_MANIFEST}" "")
 foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  file(APPEND "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  file(APPEND "/home/ragnar/git/planetoid/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 endforeach()
