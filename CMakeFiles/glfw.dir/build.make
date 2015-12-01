@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ragnar/git/planetoid
+CMAKE_SOURCE_DIR = /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ragnar/git/planetoid
+CMAKE_BINARY_DIR = /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2
 
 # Utility rule file for glfw.
 
@@ -55,59 +55,59 @@ CMakeFiles/./glfw-complete: glfw/src/glfw-stamp/./glfw-patch
 CMakeFiles/./glfw-complete: glfw/src/glfw-stamp/./glfw-configure
 CMakeFiles/./glfw-complete: glfw/src/glfw-stamp/./glfw-build
 CMakeFiles/./glfw-complete: glfw/src/glfw-stamp/./glfw-install
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Completed 'glfw'"
-	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/CMakeFiles/.
-	/usr/bin/cmake -E touch /home/ragnar/git/planetoid/CMakeFiles/./glfw-complete
-	/usr/bin/cmake -E touch /home/ragnar/git/planetoid/glfw/src/glfw-stamp/./glfw-done
+	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/.
+	/usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/./glfw-complete
+	/usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/./glfw-done
 
 glfw/src/glfw-stamp/./glfw-install: glfw/src/glfw-stamp/./glfw-build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing install step for 'glfw'"
-	cd /home/ragnar/git/planetoid/glfw/build && $(MAKE) install
-	cd /home/ragnar/git/planetoid/glfw/build && /usr/bin/cmake -E touch /home/ragnar/git/planetoid/glfw/src/glfw-stamp/./glfw-install
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build && $(MAKE) install
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build && /usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/./glfw-install
 
 glfw/src/glfw-stamp/./glfw-mkdir:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Creating directories for 'glfw'"
-	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/glfw/src/glfw
-	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/glfw/build
-	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/glfw
-	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/glfw/tmp
-	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/glfw/src/glfw-stamp/.
-	/usr/bin/cmake -E make_directory /home/ragnar/git/planetoid/glfw/src
-	/usr/bin/cmake -E touch /home/ragnar/git/planetoid/glfw/src/glfw-stamp/./glfw-mkdir
+	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw
+	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build
+	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw
+	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/tmp
+	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/.
+	/usr/bin/cmake -E make_directory /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src
+	/usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/./glfw-mkdir
 
 glfw/src/glfw-stamp/./glfw-download: glfw/src/glfw-stamp/glfw-gitinfo.txt
 glfw/src/glfw-stamp/./glfw-download: glfw/src/glfw-stamp/./glfw-mkdir
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing download step (git clone) for 'glfw'"
-	cd /home/ragnar/git/planetoid/glfw/src && /usr/bin/cmake -P /home/ragnar/git/planetoid/glfw/tmp/glfw-gitclone.cmake
-	cd /home/ragnar/git/planetoid/glfw/src && /usr/bin/cmake -E touch /home/ragnar/git/planetoid/glfw/src/glfw-stamp/./glfw-download
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src && /usr/bin/cmake -P /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/tmp/glfw-gitclone.cmake
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src && /usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/./glfw-download
 
 glfw/src/glfw-stamp/./glfw-update: glfw/src/glfw-stamp/./glfw-download
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing update step for 'glfw'"
-	cd /home/ragnar/git/planetoid/glfw/src/glfw && /usr/bin/cmake -P /home/ragnar/git/planetoid/glfw/tmp/glfw-gitupdate.cmake
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw && /usr/bin/cmake -P /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/tmp/glfw-gitupdate.cmake
 
 glfw/src/glfw-stamp/./glfw-patch: glfw/src/glfw-stamp/./glfw-download
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "No patch step for 'glfw'"
-	/usr/bin/cmake -E touch /home/ragnar/git/planetoid/glfw/src/glfw-stamp/./glfw-patch
+	/usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/./glfw-patch
 
 glfw/src/glfw-stamp/./glfw-configure: glfw/tmp/glfw-cfgcmd.txt
 glfw/src/glfw-stamp/./glfw-configure: glfw/src/glfw-stamp/./glfw-update
 glfw/src/glfw-stamp/./glfw-configure: glfw/src/glfw-stamp/./glfw-patch
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing configure step for 'glfw'"
-	cd /home/ragnar/git/planetoid/glfw/build && /usr/bin/cmake -DCMAKE_INSTALL_PREFIX:PATH=/home/ragnar/git/planetoid/glfw -DBUILD_SHARED_LIBS=ON "-GUnix Makefiles" /home/ragnar/git/planetoid/glfw/src/glfw
-	cd /home/ragnar/git/planetoid/glfw/build && /usr/bin/cmake -E touch /home/ragnar/git/planetoid/glfw/src/glfw-stamp/./glfw-configure
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build && /usr/bin/cmake -DCMAKE_INSTALL_PREFIX:PATH=/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw -DBUILD_SHARED_LIBS=ON "-GUnix Makefiles" /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build && /usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/./glfw-configure
 
 glfw/src/glfw-stamp/./glfw-build: glfw/src/glfw-stamp/./glfw-configure
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/git/planetoid/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Performing build step for 'glfw'"
-	cd /home/ragnar/git/planetoid/glfw/build && $(MAKE)
-	cd /home/ragnar/git/planetoid/glfw/build && /usr/bin/cmake -E touch /home/ragnar/git/planetoid/glfw/src/glfw-stamp/./glfw-build
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build && $(MAKE)
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build && /usr/bin/cmake -E touch /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/./glfw-build
 
 glfw: CMakeFiles/glfw
 glfw: CMakeFiles/./glfw-complete
@@ -130,6 +130,6 @@ CMakeFiles/glfw.dir/clean:
 .PHONY : CMakeFiles/glfw.dir/clean
 
 CMakeFiles/glfw.dir/depend:
-	cd /home/ragnar/git/planetoid && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ragnar/git/planetoid /home/ragnar/git/planetoid /home/ragnar/git/planetoid /home/ragnar/git/planetoid /home/ragnar/git/planetoid/CMakeFiles/glfw.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2 /home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/glfw.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/glfw.dir/depend
 

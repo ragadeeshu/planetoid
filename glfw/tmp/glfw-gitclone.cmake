@@ -4,21 +4,21 @@ endif()
 
 set(run 0)
 
-if("/home/ragnar/git/planetoid/glfw/src/glfw-stamp/glfw-gitinfo.txt" IS_NEWER_THAN "/home/ragnar/git/planetoid/glfw/src/glfw-stamp/glfw-gitclone-lastrun.txt")
+if("/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/glfw-gitinfo.txt" IS_NEWER_THAN "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/glfw-gitclone-lastrun.txt")
   set(run 1)
 endif()
 
 if(NOT run)
-  message(STATUS "Avoiding repeated git clone, stamp file is up to date: '/home/ragnar/git/planetoid/glfw/src/glfw-stamp/glfw-gitclone-lastrun.txt'")
+  message(STATUS "Avoiding repeated git clone, stamp file is up to date: '/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/glfw-gitclone-lastrun.txt'")
   return()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E remove_directory "/home/ragnar/git/planetoid/glfw/src/glfw"
+  COMMAND ${CMAKE_COMMAND} -E remove_directory "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/home/ragnar/git/planetoid/glfw/src/glfw'")
+  message(FATAL_ERROR "Failed to remove directory: '/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw'")
 endif()
 
 # try the clone 3 times incase there is an odd git clone issue
@@ -27,7 +27,7 @@ set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "/usr/bin/git" clone "https://github.com/glfw/glfw.git" "glfw"
-    WORKING_DIRECTORY "/home/ragnar/git/planetoid/glfw/src"
+    WORKING_DIRECTORY "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src"
     RESULT_VARIABLE error_code
     )
   math(EXPR number_of_tries "${number_of_tries} + 1")
@@ -42,7 +42,7 @@ endif()
 
 execute_process(
   COMMAND "/usr/bin/git" checkout 3.1.2
-  WORKING_DIRECTORY "/home/ragnar/git/planetoid/glfw/src/glfw"
+  WORKING_DIRECTORY "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw"
   RESULT_VARIABLE error_code
   )
 if(error_code)
@@ -51,32 +51,32 @@ endif()
 
 execute_process(
   COMMAND "/usr/bin/git" submodule init
-  WORKING_DIRECTORY "/home/ragnar/git/planetoid/glfw/src/glfw"
+  WORKING_DIRECTORY "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to init submodules in: '/home/ragnar/git/planetoid/glfw/src/glfw'")
+  message(FATAL_ERROR "Failed to init submodules in: '/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw'")
 endif()
 
 execute_process(
   COMMAND "/usr/bin/git" submodule update --recursive 
-  WORKING_DIRECTORY "/home/ragnar/git/planetoid/glfw/src/glfw"
+  WORKING_DIRECTORY "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/home/ragnar/git/planetoid/glfw/src/glfw'")
+  message(FATAL_ERROR "Failed to update submodules in: '/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
   COMMAND ${CMAKE_COMMAND} -E copy
-    "/home/ragnar/git/planetoid/glfw/src/glfw-stamp/glfw-gitinfo.txt"
-    "/home/ragnar/git/planetoid/glfw/src/glfw-stamp/glfw-gitclone-lastrun.txt"
-  WORKING_DIRECTORY "/home/ragnar/git/planetoid/glfw/src/glfw"
+    "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/glfw-gitinfo.txt"
+    "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/glfw-gitclone-lastrun.txt"
+  WORKING_DIRECTORY "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/ragnar/git/planetoid/glfw/src/glfw-stamp/glfw-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw-stamp/glfw-gitclone-lastrun.txt'")
 endif()
 
