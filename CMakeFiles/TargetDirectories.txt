@@ -1,3 +1,0 @@
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/EDAN_35_Lab2.dir
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/glfw.dir
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/CMakeFiles/imgui.dir

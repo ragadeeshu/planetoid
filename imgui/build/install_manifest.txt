@@ -1,7 +1,0 @@
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/lib/libimgui.so
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/include/imgui.h
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/include/imgui_internal.h
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/include/imconfig.h
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/include/stb_rect_pack.h
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/include/stb_textedit.h
-/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/imgui/include/stb_truetype.h
