@@ -4,14 +4,14 @@
 *.o
 *.obj
 
-CMakeCache.txt
-CMakeFiles
-CMakeScripts
+#CMakeCache.txt
+#CMakeFiles
+#CMakeScripts
 EDAN_35_Lab2
 
-Makefile
-cmake_install.cmake
-install_manifest.txt
+#Makefile
+#cmake_install.cmake
+#install_manifest.txt
 
 # Precompiled Headers
 *.gch

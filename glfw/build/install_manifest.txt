@@ -1,0 +1,10 @@
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/include/GLFW/glfw3.h
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/include/GLFW/glfw3native.h
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/lib/cmake/glfw/glfw3Config.cmake
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/lib/cmake/glfw/glfw3ConfigVersion.cmake
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/lib/cmake/glfw/glfwTargets.cmake
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/lib/cmake/glfw/glfwTargets-noconfig.cmake
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/lib/pkgconfig/glfw3.pc
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/lib/libglfw.so.3.1
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/lib/libglfw.so.3
+/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/lib/libglfw.so
