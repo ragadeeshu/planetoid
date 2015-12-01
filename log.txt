@@ -1,0 +1,15 @@
+
+ === Log (Dec  1 2015, 15:14:26) === 
+
+Running Bonobo v 0.2
+Initiating window management system...
+Done
+Couldn't setup OpenGL, trying a lower version
+
+Using OpenGL 3.3 with context options: profile=core, debug=false, robust access=false, forward compatible=false.
+DebugCallback is not core in OpenGL 3.3, but might be enabled through an extension. However this is currently not supported by bonobo.
+Loading Sponza...
+Loading mesh took 97 ms
+Loading textures...
+Done
+Uniform Layer not found in shader
