@@ -435,7 +435,7 @@ void bonobo::unloadShader(bonobo::Shader *handle)
 	bonobo::Stats.n_shaders--;
 	Assert(bonobo::Stats.n_shaders >= 0);
 	glDeleteShader(handle->mId);
-	delete handle;
+	//delete handle;
 	GL_CHECK_ERRORS();
 }
 

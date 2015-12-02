@@ -87,6 +87,7 @@ void Deferred::run()
 	OBJ::Mesh *mesh = OBJ::ReadCachedOBJFile(RESOURCES_PATH("crysponza/sponza.obj"));
 	OBJ::MaterialMap *materials = nullptr;
 	std::unordered_map<std::string, bonobo::Texture *> diffuseTextures;
+	std::unordered_map<std::string, bonobo::Texture *> specularTextures;
 	std::unordered_map<std::string, bonobo::Texture *> normalTextures;
 	if (!mesh->mMaterialFileName.empty()) {
 		Log("Loading textures...");
@@ -99,6 +100,12 @@ void Deferred::run()
 				oss = std::ostringstream();
 				oss << RESOURCES_PATH("crysponza/") << dt;
 				diffuseTextures[it.first] = bonobo::loadTexture2D(oss.str());
+			}
+			std::string st = it.second.mSpecularTexture;
+			if (!st.empty()) {
+				oss = std::ostringstream();
+				oss << RESOURCES_PATH("crysponza/") << st;
+				specularTextures[it.first] = bonobo::loadTexture2D(oss.str());
 			}
 			std::string nt = it.second.mBumpTexture;
 			if (!nt.empty()) {
@@ -136,15 +143,60 @@ void Deferred::run()
 	//
 	// Load all the shader programs used
 	//
+	std::string defaultShaderNames[2]   = { SHADERS_PATH("default.vert"),           SHADERS_PATH("default.frag") };
 	std::string shaderNames[2]          = { SHADERS_PATH("fill_gbuffer.vert"),      SHADERS_PATH("fill_gbuffer.frag") };
 	std::string shadowMapShaderNames[2] = { SHADERS_PATH("fill_shadowmap.vert"),    SHADERS_PATH("fill_shadowmap.frag") };
 	std::string spotlightShaderNames[2] = { SHADERS_PATH("accumulate_lights.vert"), SHADERS_PATH("accumulate_lights.frag") };
 	std::string resolveShaderNames[2]   = { SHADERS_PATH("resolve_deferred.vert"),  SHADERS_PATH("resolve_deferred.frag") };
 
-	bonobo::ShaderProgram *lambertShader         = bonobo::loadShaderProgram(shaderNames,          2);
-	bonobo::ShaderProgram *shadowMapShader       = bonobo::loadShaderProgram(shadowMapShaderNames, 2);
-	bonobo::ShaderProgram *spotlightShader       = bonobo::loadShaderProgram(spotlightShaderNames, 2);
-	bonobo::ShaderProgram *deferredResolveShader = bonobo::loadShaderProgram(resolveShaderNames,   2);
+	bonobo::ShaderProgram *defaultShader         = bonobo::loadShaderProgram(defaultShaderNames,   2);
+	bonobo::ShaderProgram *lambertShader         = nullptr;
+	bonobo::ShaderProgram *shadowMapShader       = nullptr;
+	bonobo::ShaderProgram *spotlightShader       = nullptr;
+	bonobo::ShaderProgram *deferredResolveShader = nullptr;
+
+	if (defaultShader == nullptr) {
+		LogError("Failed to load default shader\n");
+		exit(-1);
+	}
+
+	auto reloadShaders = [&](){
+		if (lambertShader != nullptr && lambertShader != defaultShader) {
+			bonobo::unloadShader(&lambertShader->mShaders[0]);
+			bonobo::unloadShader(&lambertShader->mShaders[1]);
+			bonobo::unloadShaderProgram(lambertShader);
+		}
+		if (shadowMapShader != nullptr && shadowMapShader != defaultShader) {
+			bonobo::unloadShader(&shadowMapShader->mShaders[0]);
+			bonobo::unloadShader(&shadowMapShader->mShaders[1]);
+			bonobo::unloadShaderProgram(shadowMapShader);
+		}
+		if (spotlightShader != nullptr && spotlightShader != defaultShader) {
+			bonobo::unloadShader(&spotlightShader->mShaders[0]);
+			bonobo::unloadShader(&spotlightShader->mShaders[1]);
+			bonobo::unloadShaderProgram(spotlightShader);
+		}
+		if (deferredResolveShader != nullptr && deferredResolveShader != defaultShader) {
+			bonobo::unloadShader(&deferredResolveShader->mShaders[0]);
+			bonobo::unloadShader(&deferredResolveShader->mShaders[1]);
+			bonobo::unloadShaderProgram(deferredResolveShader);
+		}
+
+		lambertShader         = bonobo::loadShaderProgram(shaderNames,          2);
+		shadowMapShader       = bonobo::loadShaderProgram(shadowMapShaderNames, 2);
+		spotlightShader       = bonobo::loadShaderProgram(spotlightShaderNames, 2);
+		deferredResolveShader = bonobo::loadShaderProgram(resolveShaderNames,   2);
+
+		if (lambertShader == nullptr)
+			lambertShader = defaultShader;
+		if (shadowMapShader == nullptr)
+			shadowMapShader = defaultShader;
+		if (spotlightShader == nullptr)
+			spotlightShader = defaultShader;
+		if (deferredResolveShader == nullptr)
+			deferredResolveShader = defaultShader;
+	};
+	reloadShaders();
 
 
 	//
@@ -165,19 +217,21 @@ void Deferred::run()
 	//
 	// Setup FBOs
 	//
-	bonobo::Texture *rtDiffuse            = bonobo::loadTexture2D(RES_X, RES_Y, bonobo::TEXTURE_UNORM, v4i(8, 8, 8, 8), MSAA_RATE);
-	bonobo::Texture *rtNormalSpecular     = bonobo::loadTexture2D(RES_X, RES_Y, bonobo::TEXTURE_UNORM, v4i(8, 8, 8, 8), MSAA_RATE);
-	bonobo::Texture *rtLightContributions = bonobo::loadTexture2D(RES_X, RES_Y, bonobo::TEXTURE_UNORM, v4i(8, 8, 8, 8), MSAA_RATE);
+	bonobo::Texture *rtDiffuse             = bonobo::loadTexture2D(RES_X, RES_Y, bonobo::TEXTURE_UNORM, v4i(8, 8, 8, 8), MSAA_RATE);
+	bonobo::Texture *rtSpecular            = bonobo::loadTexture2D(RES_X, RES_Y, bonobo::TEXTURE_UNORM, v4i(8, 8, 8, 8), MSAA_RATE);
+	bonobo::Texture *rtNormalSpecular      = bonobo::loadTexture2D(RES_X, RES_Y, bonobo::TEXTURE_UNORM, v4i(8, 8, 8, 8), MSAA_RATE);
+	bonobo::Texture *rtLightDContributions = bonobo::loadTexture2D(RES_X, RES_Y, bonobo::TEXTURE_UNORM, v4i(8, 8, 8, 8), MSAA_RATE);
+	bonobo::Texture *rtLightSContributions = bonobo::loadTexture2D(RES_X, RES_Y, bonobo::TEXTURE_UNORM, v4i(8, 8, 8, 8), MSAA_RATE);
 
 	bonobo::Texture *rtDepthTexture = bonobo::loadTexture(nullptr, RES_X,           RES_Y,           0, 0, 1, 0, bonobo::TEXTURE_FLOAT_DEPTH, v4i(32, 0, 0, 0));
 	bonobo::Texture *rtShadowMap    = bonobo::loadTexture(nullptr, SHADOWMAP_RES_X, SHADOWMAP_RES_Y, 0, 0, 1, 0, bonobo::TEXTURE_FLOAT_DEPTH, v4i(32, 0, 0, 0));
 
-	const bonobo::Texture *gbufferColorAttachments[2] = { rtDiffuse, rtNormalSpecular };
-	const bonobo::Texture *lightColorAttachments[1]   = { rtLightContributions };
+	const bonobo::Texture *gbufferColorAttachments[3] = { rtDiffuse, rtSpecular, rtNormalSpecular };
+	const bonobo::Texture *lightColorAttachments[2]   = { rtLightDContributions, rtLightSContributions };
 
-	bonobo::FBO *deferredFbo  = bonobo::loadFrameBufferObject(gbufferColorAttachments, 2, rtDepthTexture);
+	bonobo::FBO *deferredFbo  = bonobo::loadFrameBufferObject(gbufferColorAttachments, 3, rtDepthTexture);
 	bonobo::FBO *shadowMapFbo = bonobo::loadFrameBufferObject(                         0, rtShadowMap);
-	bonobo::FBO *lightFbo     = bonobo::loadFrameBufferObject(lightColorAttachments,   1, rtDepthTexture);
+	bonobo::FBO *lightFbo     = bonobo::loadFrameBufferObject(lightColorAttachments,   2, rtDepthTexture);
 
 
 	//
@@ -256,6 +310,11 @@ void Deferred::run()
 		inputHandler->Advance();
 		mCamera.Update(ddeltatime, *inputHandler);
 
+		if ((inputHandler->GetKeycodeState(GLFW_KEY_R) & JUST_PRESSED)) {
+			LogInfo("Reloading all shaders\n");
+			reloadShaders();
+		}
+
 		ImGui_ImplGlfwGL3_NewFrame();
 
 
@@ -282,16 +341,20 @@ void Deferred::run()
 
 		for (OBJ::Group const& group : mesh->mGroups) {
 			bonobo::Texture *diffuseTexture = defaultTexture;
+			bonobo::Texture *specularTexture = defaultTexture;
 			bonobo::Texture *normalTexture = defaultTexture;
 			auto mat = diffuseTextures.find(group.mMaterial);
 			if (mat != diffuseTextures.end())
 				diffuseTexture = mat->second;
+			mat = specularTextures.find(group.mMaterial);
+			if (mat != specularTextures.end())
+				specularTexture = mat->second;
 			mat = normalTextures.find(group.mMaterial);
 			if (mat != normalTextures.end())
 				normalTexture = mat->second;
 
 			bonobo::bindTextureSampler(*lambertShader, "diffuse_texture", 0, *diffuseTexture, *sampler);
-			bonobo::bindTextureSampler(*lambertShader, "specular_texture", 1, *diffuseTexture, *sampler);
+			bonobo::bindTextureSampler(*lambertShader, "specular_texture", 1, *specularTexture, *sampler);
 			bonobo::bindTextureSampler(*lambertShader, "normal_texture", 2, *normalTexture, *sampler);
 
 			GLStateInspection::CaptureSnapshot("Filling Pass");
@@ -335,7 +398,6 @@ void Deferred::run()
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		bonobo::checkForErrors();
 
-		bonobo::checkForErrors();
 		for (int i = 0; i < LIGHTS_NB; ++i) {
 			float secondsNb = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - startTime).count() * 0.001f;
 
@@ -444,8 +506,10 @@ void Deferred::run()
 		glClear(GL_COLOR_BUFFER_BIT);
 		bonobo::checkForErrors();
 
-		bonobo::bindTextureSampler(*deferredResolveShader, "diffuse_buffer", 0, *rtDiffuse,            *sampler);
-		bonobo::bindTextureSampler(*deferredResolveShader, "light_buffer",   1, *rtLightContributions, *sampler);
+		bonobo::bindTextureSampler(*deferredResolveShader, "diffuse_buffer",  0, *rtDiffuse,             *sampler);
+		bonobo::bindTextureSampler(*deferredResolveShader, "specular_buffer", 1, *rtSpecular,            *sampler);
+		bonobo::bindTextureSampler(*deferredResolveShader, "light_d_buffer",  2, *rtLightDContributions, *sampler);
+		bonobo::bindTextureSampler(*deferredResolveShader, "light_s_buffer",  3, *rtLightSContributions, *sampler);
 
 		GLStateInspection::CaptureSnapshot("Resolve Pass");
 
@@ -455,31 +519,32 @@ void Deferred::run()
 		//
 		// Pass 4: Draw wireframe cones on top of the final image for debugging purposes
 		//
-		// glUseProgram(shadowMapShader->mId);;
-		// glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-		// for (uint32_t i = 0u; i < LIGHTS_NB; ++i) {
-		// 	bonobo::setUniform(*shadowMapShader, "model_to_clip_matrix", mCamera.GetWorldToClipMatrix() * lightTransforms[i].GetMatrix() * lightOffsetTransform.GetMatrix() * coneScaleTransform.GetMatrix());
-		//
-		// 	glBindVertexArray(coneVao);
-		// 	bonobo::checkForErrors();
-		//
-		// 	glDrawArrays(GL_TRIANGLE_STRIP, 0, coneVerticesNb);
-		//
-		// 	glBindVertexArray(0u);
-		// 	bonobo::checkForErrors();
-		// }
-		// glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-		//
+		//glUseProgram(shadowMapShader->mId);;
+		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		//for (uint32_t i = 0u; i < LIGHTS_NB; ++i) {
+		//	bonobo::setUniform(*shadowMapShader, "model_to_clip_matrix", mCamera.GetWorldToClipMatrix() * lightTransforms[i].GetMatrix() * lightOffsetTransform.GetMatrix() * coneScaleTransform.GetMatrix());
+
+		//	glBindVertexArray(coneVao);
+		//	bonobo::checkForErrors();
+
+		//	glDrawArrays(GL_TRIANGLE_STRIP, 0, coneVerticesNb);
+
+		//	glBindVertexArray(0u);
+		//	bonobo::checkForErrors();
+		//}
+		//glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
 
 		//
 		// Output content of the g-buffer as well as of the shadowmap, for debugging purposes
 		//
-		gSimpleDraw.Texture(v2f(-0.95f, -0.95f), v2f(-0.55f, -0.55f), *rtDiffuse,            v4i(0, 1, 2, -1));
-		gSimpleDraw.Texture(v2f(-0.45f, -0.95f), v2f(-0.05f, -0.55f), *rtNormalSpecular,     v4i(0, 1, 2, -1));
-		gSimpleDraw.Texture(v2f( 0.05f, -0.95f), v2f( 0.45f, -0.55f), *rtNormalSpecular,     v4i(3, 3, 3, -1));
-		gSimpleDraw.Texture(v2f( 0.55f, -0.95f), v2f( 0.95f, -0.55f), *rtDepthTexture,       v4i(0, 0, 0, -1));
-		gSimpleDraw.Texture(v2f(-0.95f,  0.55f), v2f(-0.55f,  0.95f), *rtShadowMap,          v4i(0, 0, 0, -1));
-		gSimpleDraw.Texture(v2f(-0.45f,  0.55f), v2f(-0.05f,  0.95f), *rtLightContributions, v4i(0, 1, 2, -1));
+		gSimpleDraw.Texture(v2f(-0.95f, -0.95f), v2f(-0.55f, -0.55f), *rtDiffuse,             v4i(0, 1, 2, -1));
+		gSimpleDraw.Texture(v2f(-0.45f, -0.95f), v2f(-0.05f, -0.55f), *rtNormalSpecular,      v4i(0, 1, 2, -1));
+		gSimpleDraw.Texture(v2f( 0.05f, -0.95f), v2f( 0.45f, -0.55f), *rtSpecular,            v4i(0, 1, 2, -1));
+		gSimpleDraw.Texture(v2f( 0.55f, -0.95f), v2f( 0.95f, -0.55f), *rtDepthTexture,        v4i(0, 0, 0, -1));
+		gSimpleDraw.Texture(v2f(-0.95f,  0.55f), v2f(-0.55f,  0.95f), *rtShadowMap,           v4i(0, 0, 0, -1));
+		gSimpleDraw.Texture(v2f(-0.45f,  0.55f), v2f(-0.05f,  0.95f), *rtLightDContributions, v4i(0, 1, 2, -1));
+		gSimpleDraw.Texture(v2f( 0.05f,  0.55f), v2f( 0.45f,  0.95f), *rtLightSContributions, v4i(0, 1, 2, -1));
 
 
 		bonobo::checkForErrors();

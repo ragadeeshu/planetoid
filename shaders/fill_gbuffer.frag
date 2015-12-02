@@ -10,7 +10,9 @@ in vec3 worldspace_tangent;
 in vec2 pass_texcoords;
 
 layout (location = 0) out vec4 geometry_diffuse;
-layout (location = 1) out vec4 geometry_normal_and_specular;
+layout (location = 1) out vec4 geometry_specular;
+layout (location = 2) out vec4 geometry_normal_and_specular;
+
 
 
 void main()
@@ -25,7 +27,7 @@ void main()
 	geometry_normal_and_specular.xyz =
 	 (normalize(
 		// worldspace_normal
-		tbn*texture(normal_texture, pass_texcoords).xyz
+		tbn*(2*texture(normal_texture, pass_texcoords).xyz-1)
 		) * 0.5 + 0.5)
 	;
 
@@ -33,4 +35,5 @@ void main()
 	geometry_normal_and_specular.a =( texture(specular_texture, pass_texcoords).r
 	+texture(specular_texture, pass_texcoords).g
 	+texture(specular_texture, pass_texcoords).b)/3;
+	geometry_specular = texture(specular_texture, pass_texcoords);
 }

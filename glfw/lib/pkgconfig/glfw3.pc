@@ -1,4 +1,4 @@
-prefix=/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw
+prefix=/home/ragnar/git/planetoid/glfw
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib

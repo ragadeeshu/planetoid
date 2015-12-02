@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build/install_manifest.txt\"")
+if (NOT EXISTS "/home/ragnar/git/planetoid/glfw/build/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/home/ragnar/git/planetoid/glfw/build/install_manifest.txt\"")
 endif()
 
-file(READ "/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/build/install_manifest.txt" files)
+file(READ "/home/ragnar/git/planetoid/glfw/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

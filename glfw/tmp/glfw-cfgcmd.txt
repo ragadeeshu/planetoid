@@ -1,1 +1,1 @@
-cmd='/usr/bin/cmake;-DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR>;-DBUILD_SHARED_LIBS=ON;-GUnix Makefiles;/home/ragnar/Dropbox/datorgrafik/EDAN35_Assignment2/glfw/src/glfw'
+cmd='/usr/bin/cmake;-DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR>;-DBUILD_SHARED_LIBS=ON;-GUnix Makefiles;/home/ragnar/git/planetoid/glfw/src/glfw'

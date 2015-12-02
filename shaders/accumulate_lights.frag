@@ -19,7 +19,8 @@ uniform float LightAngleFalloff;
 
 uniform vec2 ShadowMapTexelSize;
 
-layout (location = 0) out vec4 light_contribution;
+layout (location = 0) out vec4 light_diffuse_contribution;
+layout (location = 1) out vec4 light_specular_contribution;
 
 float shadowSampler(sampler2DShadow tex, vec3 norm3){
     int size = 3;
@@ -61,7 +62,8 @@ void main()
         *LightIntensity
         /dot(LightPosition-wposition.xyz,LightPosition-wposition.xyz);
 
-    light_contribution = vec4(diffuse_color+specular_color,1.0)*light_fallof*isShadow;
+    light_diffuse_contribution = vec4(diffuse_color,1.0)*light_fallof*isShadow;
+    light_specular_contribution = vec4(specular_color,1.0)*light_fallof*isShadow;
     // light_contribution = vec4 (vec3(1)*isShadow,1);
 
 }
