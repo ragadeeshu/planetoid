@@ -8,7 +8,9 @@ CMakeCache.txt
 CMakeFiles
 CMakeScripts
 EDAN_35_Lab2
-
+glfw
+log.txt
+imgui
 Makefile
 cmake_install.cmake
 install_manifest.txt
