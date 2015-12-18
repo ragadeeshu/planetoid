@@ -15,6 +15,7 @@ PROJECT (
 INCLUDE (ExternalProject)
 
 
+  ADD_COMPILE_OPTIONS (-fpermissive)
 # Set C++ flags
 IF (NOT (CMAKE_CXX_COMPILER_ID MATCHES "MSVC"))
   # clang and GCC do not default to C++11 by default, but MSVC seems to (and I
@@ -135,7 +136,7 @@ CONFIGURE_FILE ("${PROJECT_SOURCE_DIR}/src/config.hpp.in" "${PROJECT_BINARY_DIR}
 SET (PATH_SEP \\)
 SOURCE_GROUP (
   Shaders${PATH_SEP}SimpleDraw
-  
+
   FILES
   ${SHADERS_DIR}/ArrayToMs.vert
   ${SHADERS_DIR}/ArrayToMs.frag
@@ -146,7 +147,7 @@ SOURCE_GROUP (
 )
 SOURCE_GROUP (
   Shaders
-  
+
   FILES
   ${SHADERS_DIR}/fill_gbuffer.vert
   ${SHADERS_DIR}/fill_gbuffer.frag

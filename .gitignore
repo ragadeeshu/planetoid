@@ -38,3 +38,14 @@ install_manifest.txt
 *.exe
 *.out
 *.app
+*.trace
+*.sdf
+*.log
+*.tlog
+*.pdb
+Release/
+*.txt
+.vs
+Debug/
+glfw/
+imgui/
