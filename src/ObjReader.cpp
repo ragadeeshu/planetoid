@@ -118,7 +118,7 @@ OBJ::Mesh *OBJ::ReadOBJFile(std::string filename)
 {
 	std::ifstream ifs = std::ifstream(filename, std::ios::binary);
 	if (!ifs.good() || !ifs.is_open()) {
-		LogWarning("Couldn't open .obj file %s", filename.c_str());
+		LogError("Couldn't open .obj file %s", filename.c_str());
 		return nullptr;
 	}
 	OBJ::Mesh *mesh = OBJ::ReadOBJ(ifs);
@@ -382,11 +382,15 @@ OBJ::Mesh *OBJ::ReadCachedOBJFile(std::string filename)
 		StructDescEntry idxEntries[] = {DescEntry<vec3i>("Index")};
 		StructDesc idxDesc(idxEntries, 1);
 		WriteData(ofs, idxDesc, (u8 *) &mesh->mTriangles[0], mesh->mTriangles.size());
-		ofs << mesh->mMaterialFileName << " ";
+		ofs << (mesh->mMaterialFileName.empty() ? 0 : 1) << " ";
+		if (!mesh->mMaterialFileName.empty())
+			ofs << mesh->mMaterialFileName << " ";
 		ofs << mesh->mGroups.size() << " ";
 		for (auto it : mesh->mGroups) {
 			ofs << it.mName << " ";
-			ofs << it.mMaterial << " ";
+			ofs << (it.mMaterial.empty() ? 0 : 1) << " ";
+			if (!it.mMaterial.empty())
+				ofs << it.mMaterial << " ";
 			ofs << it.mStart << " ";
 			ofs << it.mEnd << " ";
 		}
@@ -412,12 +416,18 @@ OBJ::Mesh *OBJ::ReadCachedOBJFile(std::string filename)
 		mesh->mTriangles.push_back(idx[i]);
 	delete [] data;
 	size_t nGroups;
-	ifs >> mesh->mMaterialFileName;
+	short hasMaterialFileName;
+	ifs >> hasMaterialFileName;
+	if (hasMaterialFileName == 1)
+		ifs >> mesh->mMaterialFileName;
 	ifs >> nGroups;
 	for (size_t i = 0; i < nGroups; i++) {
 		Group g;
+		short hasMaterial;
 		ifs >> g.mName;
-		ifs >> g.mMaterial;
+		ifs >> hasMaterial;
+		if (hasMaterial == 1)
+			ifs >> g.mMaterial;
 		ifs >> g.mStart;
 		ifs >> g.mEnd;
 		mesh->mGroups.push_back(g);

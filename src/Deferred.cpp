@@ -2,6 +2,7 @@
 
 #include <array>
 #include <chrono>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -39,7 +40,7 @@
 #define SHADOWMAP_RES_Y  512
 
 #define MSAA_RATE	             1
-#define LIGHT_INTENSITY     2400000.0f
+#define LIGHT_INTENSITY     240000.0f
 #define LIGHT_ANGLE_FALLOFF      0.8f
 #define LIGHT_CUTOFF             0.05f
 
@@ -85,6 +86,8 @@ void Deferred::run()
 	//
 	Log("Loading Sponza...");
 	OBJ::Mesh *mesh = OBJ::ReadCachedOBJFile(RESOURCES_PATH("crysponza/sponza.obj"));
+	if (mesh == nullptr)
+		std::exit(EXIT_FAILURE);
 	OBJ::MaterialMap *materials = nullptr;
 	std::unordered_map<std::string, bonobo::Texture *> diffuseTextures;
 	std::unordered_map<std::string, bonobo::Texture *> specularTextures;
@@ -133,7 +136,7 @@ void Deferred::run()
 	// Setup the camera
 	//
 	FPSCameraf mCamera = FPSCameraf(fPI / 4.0f, static_cast<float>(RES_X) / static_cast<float>(RES_Y), sceneScale * 0.01f, sceneScale * 4.0f);
-	mCamera.mWorld.SetTranslate(v3f(800.0f, 125.0f, 0.0f));
+	mCamera.mWorld.SetTranslate(v3f(sceneScale * 0.17f, sceneScale * 0.03f, 0.0f));
 	mCamera.mRotation.x = fPI / 2.0f;
 	mCamera.mWorld.SetRotateY(fPI / 2.0f);
 	mCamera.mMouseSensitivity = 0.003f;
@@ -327,13 +330,13 @@ void Deferred::run()
 		glUseProgram(lambertShader->mId);
 		glViewport(0, 0, RES_X, RES_Y);
 		glClearDepthf(1.0f);
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 		glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 		bonobo::checkForErrors();
-
+	
 		bonobo::setUniform(*lambertShader, "model_to_clip_matrix", cast<f32>(mCamera.GetWorldToClipMatrix()));
 		bonobo::setUniform(*lambertShader, "model_to_world_normal_matrix", mat4f::Identity());
-
+	
 		glBindVertexArray(meshLambertVao->mId);
 		bonobo::bindVertexBufferObject(*meshVbo, 0);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, meshIbo->mId);
@@ -386,18 +389,10 @@ void Deferred::run()
 		bonobo::setRenderTarget(lightFbo, 0);
 		glUseProgram(lambertShader->mId);
 		glViewport(0, 0, RES_X, RES_Y);
-		// glClearDepthf(0.0f);
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
-
-		bonobo::setRenderTarget(shadowMapFbo, 0);
-		glUseProgram(lambertShader->mId);
-		glViewport(0, 0, SHADOWMAP_RES_X, SHADOWMAP_RES_Y);
 		glClearDepthf(1.0f);
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+		glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 		bonobo::checkForErrors();
-
 		for (int i = 0; i < LIGHTS_NB; ++i) {
 			float secondsNb = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - startTime).count() * 0.001f;
 
@@ -407,33 +402,33 @@ void Deferred::run()
 			//
 			// Pass 2.1: Generate shadow map for light i
 			//
-			bonobo::setRenderTarget(shadowMapFbo, 0);
-			glUseProgram(shadowMapShader->mId);
+			bonobo::setRenderTarget(lightFbo, 0);
+			glUseProgram(lambertShader->mId);
 			glViewport(0, 0, SHADOWMAP_RES_X, SHADOWMAP_RES_Y);
-			glClearDepthf(1.0f);
-			glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			glClearDepthf(0.0f);
+			glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+			glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 			bonobo::checkForErrors();
 
-			mat4f lightMatrix = lightProjection * lightOffsetTransform.GetMatrixInverse() * lightTransform.GetMatrixInverse();
-			bonobo::setUniform(*shadowMapShader, "model_to_clip_matrix", lightMatrix);
-
-			GLStateInspection::CaptureSnapshot("Shadow Map Generation");
-
-			glBindVertexArray(meshShadowMapVao->mId);
-			bonobo::bindVertexBufferObject(*meshVbo, 0);
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, meshIbo->mId);
-			bonobo::checkForErrors();
-
-			for (OBJ::Group const& group : mesh->mGroups)
-				glDrawElements(GL_TRIANGLES, (group.mEnd - group.mStart) * 3, GL_UNSIGNED_INT, (void *)(group.mStart * 3 * 4));
-
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-			bonobo::checkForErrors();
-			glBindBuffer(GL_ARRAY_BUFFER, 0);
-			bonobo::checkForErrors();
-			glBindVertexArray(0u);
-			bonobo::checkForErrors();
+			//mat4f lightMatrix = lightProjection * lightOffsetTransform.GetMatrixInverse() * lightTransform.GetMatrixInverse();
+			//bonobo::setUniform(*shadowMapShader, "model_to_clip_matrix", lightMatrix);
+			//
+			//GLStateInspection::CaptureSnapshot("Shadow Map Generation");
+			//
+			//glBindVertexArray(meshShadowMapVao->mId);
+			//bonobo::bindVertexBufferObject(*meshVbo, 0);
+			//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, meshIbo->mId);
+			//bonobo::checkForErrors();
+			//
+			//for (OBJ::Group const& group : mesh->mGroups)
+			//	glDrawElements(GL_TRIANGLES, (group.mEnd - group.mStart) * 3, GL_UNSIGNED_INT, (void *)(group.mStart * 3 * 4));
+			//
+			//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+			//bonobo::checkForErrors();
+			//glBindBuffer(GL_ARRAY_BUFFER, 0);
+			//bonobo::checkForErrors();
+			//glBindVertexArray(0u);
+			//bonobo::checkForErrors();
 
 
 			glEnable(GL_BLEND);
@@ -444,49 +439,47 @@ void Deferred::run()
 			//
 			// Pass 2.2: Accumulate light i contribution
 			bonobo::setRenderTarget(lightFbo, 0);
-			glUseProgram(spotlightShader->mId);
+			glUseProgram(lambertShader->mId);
 			glViewport(0, 0, RES_X, RES_Y);
-
-			// glClearDepthf(0.0f);
-			// glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-			// glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-			// glClear(GL_COLOR_BUFFER_BIT);
+			glClearDepthf(0.0f);
+			glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+			glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 			bonobo::checkForErrors();
 
-			bonobo::bindTextureSampler(*spotlightShader, "depthBuffer",             0, *rtDepthTexture,   *depthSampler);
-			bonobo::bindTextureSampler(*spotlightShader, "normalAndSpecularBuffer", 1, *rtNormalSpecular, *sampler);
-			bonobo::bindTextureSampler(*spotlightShader, "shadowMap",               2, *rtShadowMap,      *shadowSampler);
-
-			bonobo::setUniform(*spotlightShader, "invRes",                invRes);
-			bonobo::setUniform(*spotlightShader, "ViewProjectionInverse", mCamera.GetClipToWorldMatrix());
-			bonobo::setUniform(*spotlightShader, "ViewPosition",          mCamera.mWorld.GetTranslation());
-			bonobo::setUniform(*spotlightShader, "shadowViewProjection",  lightMatrix);
-
-			bonobo::setUniform(*spotlightShader, "model_to_clip_matrix", mCamera.GetWorldToClipMatrix() * lightTransform.GetMatrix() * lightOffsetTransform.GetMatrix() * coneScaleTransform.GetMatrix());
-			bonobo::setUniform(*spotlightShader, "LightColor",           lightColors[i]);
-			bonobo::setUniform(*spotlightShader, "LightPosition",        lightTransform.GetTranslation());
-			bonobo::setUniform(*spotlightShader, "LightDirection",       lightTransform.GetFront());
-			bonobo::setUniform(*spotlightShader, "LightIntensity",       LIGHT_INTENSITY);
-			bonobo::setUniform(*spotlightShader, "LightAngleFalloff",    LIGHT_ANGLE_FALLOFF);
-			bonobo::setUniform(*spotlightShader, "ShadowMapTexelSize",   shadowMapTexelSize);
-
-			GLStateInspection::CaptureSnapshot("Accumulating");
-
-			glBindVertexArray(coneVao);
-			bonobo::checkForErrors();
-
-			glDrawArrays(GL_TRIANGLE_STRIP, 0, coneVerticesNb);
-			bonobo::checkForErrors();
-
-			glBindVertexArray(0u);
-			bonobo::checkForErrors();
-
-			glBindSampler(2u, 0u);
-			bonobo::checkForErrors();
-			glBindSampler(1u, 0u);
-			bonobo::checkForErrors();
-			glBindSampler(0u, 0u);
-			bonobo::checkForErrors();
+			//bonobo::bindTextureSampler(*spotlightShader, "depthBuffer",             0, *rtDepthTexture,   *depthSampler);
+			//bonobo::bindTextureSampler(*spotlightShader, "normalAndSpecularBuffer", 1, *rtNormalSpecular, *sampler);
+			//bonobo::bindTextureSampler(*spotlightShader, "shadowMap",               2, *rtShadowMap,      *shadowSampler);
+			//
+			//bonobo::setUniform(*spotlightShader, "invRes",                invRes);
+			//bonobo::setUniform(*spotlightShader, "ViewProjectionInverse", mCamera.GetClipToWorldMatrix());
+			//bonobo::setUniform(*spotlightShader, "ViewPosition",          mCamera.mWorld.GetTranslation());
+			//bonobo::setUniform(*spotlightShader, "shadowViewProjection",  lightMatrix);
+			//
+			//bonobo::setUniform(*spotlightShader, "model_to_clip_matrix", mCamera.GetWorldToClipMatrix() * lightTransform.GetMatrix() * lightOffsetTransform.GetMatrix() * coneScaleTransform.GetMatrix());
+			//bonobo::setUniform(*spotlightShader, "LightColor",           lightColors[i]);
+			//bonobo::setUniform(*spotlightShader, "LightPosition",        lightTransform.GetTranslation());
+			//bonobo::setUniform(*spotlightShader, "LightDirection",       lightTransform.GetFront());
+			//bonobo::setUniform(*spotlightShader, "LightIntensity",       LIGHT_INTENSITY);
+			//bonobo::setUniform(*spotlightShader, "LightAngleFalloff",    LIGHT_ANGLE_FALLOFF);
+			//bonobo::setUniform(*spotlightShader, "ShadowMapTexelSize",   shadowMapTexelSize);
+			//
+			//GLStateInspection::CaptureSnapshot("Accumulating");
+			//
+			//glBindVertexArray(coneVao);
+			//bonobo::checkForErrors();
+			//
+			//glDrawArrays(GL_TRIANGLE_STRIP, 0, coneVerticesNb);
+			//bonobo::checkForErrors();
+			//
+			//glBindVertexArray(0u);
+			//bonobo::checkForErrors();
+			//
+			//glBindSampler(2u, 0u);
+			//bonobo::checkForErrors();
+			//glBindSampler(1u, 0u);
+			//bonobo::checkForErrors();
+			//glBindSampler(0u, 0u);
+			//bonobo::checkForErrors();
 
 			glDepthMask(GL_TRUE);
 			glDepthFunc(GL_LESS);
@@ -503,7 +496,7 @@ void Deferred::run()
 		glUseProgram(deferredResolveShader->mId);
 		glViewport(0, 0, RES_X, RES_Y);
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 		bonobo::checkForErrors();
 
 		bonobo::bindTextureSampler(*deferredResolveShader, "diffuse_buffer",  0, *rtDiffuse,             *sampler);

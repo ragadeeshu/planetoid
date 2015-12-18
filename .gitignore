@@ -2,15 +2,16 @@
 *.slo
 *.lo
 *.o
-*.obj
+
 
 CMakeCache.txt
 CMakeFiles
+config.hpp
+imgui.ini
+readme.md
 CMakeScripts
 EDAN_35_Lab2
-glfw
 log.txt
-imgui
 Makefile
 cmake_install.cmake
 install_manifest.txt
@@ -31,7 +32,7 @@ install_manifest.txt
 *.lai
 *.la
 *.a
-*.lib
+
 
 # Executables
 *.exe

@@ -18,7 +18,5 @@ void main()
 	      vec3 specular = texelFetch(specular_buffer, ivec2(gl_FragCoord.xy), 0).rgb;
 	const vec3 ambient = vec3(0.2);
 
-	frag_color =  vec4((
-    //ambient + 
-    light_d) * diffuse.rgb + light_s * specular, 1.0);
+	frag_color =  vec4((ambient + light_d) * diffuse.rgb + light_s * specular, 1.0);
 }
